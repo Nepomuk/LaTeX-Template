@@ -1,0 +1,14 @@
+{
+  "folders":
+  [
+    {
+      "path": "/Users/andre/Development/git/latex_template",
+      "file_exclude_patterns": ["*.log", "*.out", "*.svg", "*.acn", "*.acr", "*.alg", "*.glg", "*.glo", "*.gls", "*.ist"]
+    }
+  ],
+  "settings":
+  {
+    "spell_check": true,
+    "dictionary": "Packages/Language - English/en_US.dic"
+  }
+}

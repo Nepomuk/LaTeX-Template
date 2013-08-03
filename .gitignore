@@ -1,0 +1,18 @@
+*.sublime-workspace
+
+# automatically generated LaTeX stuff
+*.log
+*.aux
+*.toc
+*.out
+*.fdb_*
+*.gz
+
+# automatically generated glossary stuff
+*.acn
+*.acr
+*.alg
+*.glg
+*.glo
+*.gls
+*.ist

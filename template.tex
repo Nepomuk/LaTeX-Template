@@ -1,0 +1,69 @@
+%!TEX program = xelatex
+% ======================================================= %
+%          Random Thesis of super-cool author             %
+%                                                         %
+%  Structure:                                             %
+%   template.tex          (main file)                     %
+%    - _preamble.tex      (load packages)                 %
+%    - _settings.tex      (basic configuration)           %
+%    - _newcommands.tex   (custom commands)               %
+%    - 1 - Introduction/  (chapters in subdirectories)    %
+%    - 2 - ...                                            %
+%    -                                                    %
+%                                                         %
+% ======================================================= %
+
+% draft or final?
+\newcommand{\status}{draft}
+
+% The most general information for this document
+\newcommand{\Title}{An article about the correlation of random words with the behavior of alpha male gorillas.}
+\newcommand{\Author}{The Doctor}
+\newcommand{\keywords}{LaTeX, template, Sublime Text 2, keyword, unicorns}
+
+
+% load the general configuration
+\input{_preamble}
+\input{_settings}
+\input{_newcommands}
+
+
+% -------------------------------------------------- %
+%    title, TOC, ...                                 %
+% -------------------------------------------------- %
+
+% begin the document
+\begin{document}
+\frontmatter
+
+% the title page
+\input{_titlepage}
+
+% table of contents
+\tableofcontents*
+\newpage
+
+
+% -------------------------------------------------- %
+%    the main content                                %
+% -------------------------------------------------- %
+
+\mainmatter
+
+
+\chapter{Introduction}
+\label{s:introduction}
+\input{1_Introduction/Introduction}
+
+\chapter{Unicorns}
+\input{2_Unicorns/Unicorns}
+
+
+% -------------------------------------------------- %
+%    appendix and stuff                              %
+% -------------------------------------------------- %
+
+\backmatter
+
+
+\end{document}

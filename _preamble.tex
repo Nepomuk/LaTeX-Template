@@ -1,0 +1,59 @@
+%!TEX root = template.tex
+
+% -- packages -------------------------------------- %
+
+% basic layout of the document
+\documentclass[
+  11pt, a4paper,        % font and paper size
+  fleqn,                % align equations to the left
+  twoside, openright,   % two sided option with new chapters on the right page
+  \status               % the status (defined in main document)
+]{memoir}
+
+% general stuff
+\usepackage[utf8]{inputenc}   % Input-Encoding
+                              % (encoding which is used for saving)
+\usepackage[TS1,T1]{fontenc}  % Output-Encoding
+                              % (Latin1 [T1] with additional sepecial characters [TS1])
+
+% \usepackage[ngerman]{babel}   % German language package
+\usepackage[english]{babel}   % English language package
+
+% font and symbols
+\usepackage{amssymb,amsmath}  % more math symbols and environments
+% \usepackage{textcomp}         % even more special characters
+\usepackage{tikz}             % used to make circled numbers
+\usepackage{color}            % define your own colors
+\usepackage{scrhack}          % fixes an error caused by listings package
+\usepackage{listings}         % enables syntax highlighting for your code
+% \usepackage{helvet}           % change the font for titles
+\usepackage{fontspec}         % customized fonts
+
+% configuration
+\usepackage{hyperref}         % hyperlinks in PDF
+% The two following packages don't work with the memoir style
+% \usepackage{fancyhdr}         % configure your page header
+% \usepackage[noindentafter]{titlesec}  % configure titles
+
+% image stuff
+\usepackage{graphicx}         % include graphics
+\usepackage{rotating}         % rotate images
+% \usepackage{caption}          % customize your captions (memoir incompatible)
+% \usepackage{subfig}           % sub-captions (memoir incompatible)
+\usepackage{wrapfig}          % wrap text around images and tables
+
+% table stuff
+\usepackage{booktabs}         % professional tables
+\usepackage{multirow}         % combine table rows
+% \usepackage{arydshln}         % dashed lines in tables
+
+% additional packages (mixed)
+% \usepackage{keystroke}        % display keystrokes
+\usepackage{xspace}           % adds spaces to the end of commands if needed
+
+% packages that help during draft versions
+% (change document option from draft to final to disable)
+\usepackage[obeyDraft,textsize=scriptsize]
+  {todonotes}                 % notes and missing images
+\usepackage{showlabels}       % show label names next to numbering
+

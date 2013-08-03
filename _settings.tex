@@ -1,0 +1,108 @@
+%!TEX root = template.tex
+
+% custom font definitions
+\newfontfamily\RobotoSlab[
+  Path = font/,
+  UprightFont = RobotoSlab-Light,
+  ItalicFont = RobotoSlab-Thin,
+  BoldFont = RobotoSlab-Bold,
+  BoldItalicFont = RobotoSlab-Bold
+]{RobotoSlab}
+\newfontface\RobotoSlabThin[
+  Path = font/,
+  UprightFont = RobotoSlab-Thin,
+]{RobotoSlab}
+
+% setting the default sans serif font (e.g. for headlines)
+% (assuming Helvetica is installed on your machine...)
+\setsansfont{Helvetica}
+
+
+% until where should titles be enumerated?
+\setsecnumdepth{subsubsection}
+\settocdepth{subsection}
+
+
+% size parameters
+\setlength{\textwidth}{150mm}       % width of the text area
+\setlength{\textheight}{220mm}      % height of the text area
+\setlength{\hoffset}{0pt}           % offset insertet at the left
+\setlength{\voffset}{10pt}          % offset inserted at the top
+\setlength{\oddsidemargin}{9mm}     % offset inserted to the left for odd pages
+\setlength{\evensidemargin}{0mm}    % offset inserted to the left for even pages
+\setlength{\marginparwidth}{18mm}   % width for marginal notes (Randnotizen)
+\setlength{\parskip}{\bigskipamount} % space between two paragraphs
+\setlength{\parindent}{10pt}        % indention for a new paragraph
+
+
+% colors
+\definecolor{gray75}{gray}{0.75}
+\definecolor{gray90}{gray}{0.90}
+\definecolor{darkblue}{rgb}{0,0,0.5}
+\definecolor{darkgreen}{rgb}{0,0.5,0}
+
+
+% some PDF settings (like hyperlinks in color)
+\hypersetup{
+ pdftitle={\Title},        % title
+ pdfauthor={\Author},      % author
+ colorlinks=true,          % false: boxed links; true: colored links
+ linkcolor=darkblue,       % color of internal links
+ citecolor=darkblue,       % color of links to bibliography
+ filecolor=darkblue,       % color of file links
+ urlcolor=darkblue         % color of external links
+}
+
+
+% chapter definition
+\newif\ifchapternonum
+\makechapterstyle{jenor}{
+  \renewcommand\printchaptername{}
+  \renewcommand\printchapternum{}
+  \renewcommand\printchapternonum{\chapternonumtrue}
+  \renewcommand\chaptitlefont{\RobotoSlab\fontseries{bx}%
+    \fontshape{n}\fontsize{25}{35}\selectfont\raggedleft}
+  \renewcommand\chapnumfont{\RobotoSlab\fontseries{m}\fontshape{n}%
+    \fontsize{3cm}{0in}\selectfont\color{gray75}}
+  \renewcommand\printchaptertitle[1]{%
+    \noindent%
+    \ifchapternonum%
+    \begin{tabularx}{\textwidth}{X}%
+      {\parbox[b]{\linewidth}{\chaptitlefont ##1}%
+      \vphantom{\raisebox{-15pt}{\chapnumfont 1}}}
+    \end{tabularx}%
+    \else
+    \begin{tabularx}{\textwidth}{Xl}
+      {\parbox[b]{\linewidth}{\chaptitlefont ##1}}
+      & \raisebox{-15pt}{\chapnumfont\ \thechapter}%
+    \end{tabularx}%
+    \fi
+    \par\vskip2mm\hrule
+  }
+}
+\chapterstyle{jenor}
+
+
+% other title definitions
+\setsecheadstyle{\fontfamily{\sfdefault}\Large\bfseries}
+\setsubsecheadstyle{\fontfamily{\sfdefault}\large\bfseries}
+\setsubsubsecheadstyle{\fontfamily{\sfdefault}\bfseries}
+\setparaheadstyle{\fontfamily{\sfdefault}\bfseries}
+\setsubparaheadstyle{\fontfamily{\sfdefault}\bfseries}
+
+
+% table of contents
+\renewcommand{\cftchapterfont}{\RobotoSlab\bfseries}
+% \renewcommand{\cftsectionfont}{\fontfamily{\sfdefault}\selectfont\small}
+% \renewcommand{\cftsubsectionfont}{\fontfamily{\sfdefault}\selectfont\small}
+
+
+% caption styling
+\captiontitlefont{\small}
+\captionnamefont{\small\bfseries}
+\indentcaption{10pt}
+
+
+% rotate labels from showlabels to make them fit on the margin
+\renewcommand{\showlabelfont}{\scriptsize\ttfamily}
+\renewcommand{\showlabelsetlabel}[1]{\begin{turn}{60}\showlabelfont #1\end{turn}}
