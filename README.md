@@ -12,22 +12,34 @@ LaTeX-Template
 A LaTeX template with some interesting stuff I found over the years. Might be overkill for small projects though. Some features I explain here, for all the configuration look inside the files. I tried to comment everything important.
 
 
+Install fonts
+-------------
+
+One necessary step to get this example to compile is download the required fonts. In this case it is the RobotoSlab font from [Google's Web Font library](http://www.google.com/fonts/).
+
+[Go over there](http://www.google.com/fonts/), search for "roboto" and add all styles from Roboto Slab to your collection. Then download the collection compressed as a `.zip` file via the little arrow button on the top right **or use the [direct link](http://www.google.com/fonts/download?kit=XjkaEzzmSNN61VxmbyFKHIfD-WQWLbF4rYwcBGowFYY)** (I don't know how long this will work though).
+
+After you downloaded the archive, extract the files inside and put the `.ttf` inside the `./font/` directory from this project.
+
+
+
 Files in this project
 ---------------------
 
 ### Folder structure
-* **`/`**: Basic files, project configuration, final PDF.
-* **`/font/`**: TrueType fonts to use in the document.
-* **`/1_Chapter/`**: Each chapter gets its own directory, but feel free to use a different approach for structuring.
+* **`./`**: Basic files, project configuration, final PDF.
+* **`./font/`**: TrueType fonts to use in the document.
+* **`./1_Chapter/`**: Each chapter gets its own directory, but feel free to use a different approach for structuring.
 
 
-### `/`, root folder
+### `./`, root folder
 * `template.sublime-project`: The project file for Sublime Text 2. Adjust the path inside, otherwise you can't use it.
 * `template.tex`: The master LaTeX file.
 * `_preamble.tex`: Loading packages and styles, the basic stuff.
 * `_settings.tex`: Settings for the document.
 * `_newcommands.tex`: New defined commands.
 * `_titlepage.tex`: The title page, who would have suspected it.
+
 
 
 The editor of choice
@@ -73,3 +85,29 @@ LaTeX feature list
 
 ### Custom fonts
 When designing the looks of the project you are working on, you'll notice rather quickly that your options are a bit limited. It would be especially nice to select custom fonts for headlines or the title page.
+
+To get this running, you need to follow four steps:
+
+1. Download the fonts you like, see [Install fonts](#install-fonts) for the description of an example. But you are free to put any TrueType fonts (`.tty` files) inside the `./font/` directory.
+
+2. Tell Sublime Text which compiler it should use. `pdflatex` doesn't support TrueType fonts, the newer `xelatex` does. Add the following line on the very top in your master file:
+
+        %!TEX program = xelatex
+
+3. Define the font family. This is done by the first block in the `_settings.tex` file.
+
+        \newfontfamily\RobotoSlab[
+          Path = font/,
+          UprightFont = RobotoSlab-Light,
+          ItalicFont = RobotoSlab-Thin,
+          BoldFont = RobotoSlab-Bold,
+          BoldItalicFont = RobotoSlab-Bold
+        ]{RobotoSlab}
+
+    The names after the equal signs have to match the file names in the font directory. In this case the matching is a bit more creative because Roboto Slab isn't shipped with an italic style.
+
+4. Use the font in the code by calling the newly defined command
+
+        \RobotoSlab
+
+    One example for using it is in the title page (`_titlepage.tex`).
