@@ -99,9 +99,7 @@ To get this running, you need to follow four steps:
 
 2. Tell Sublime Text which compiler it should use. `pdflatex` doesn't support TrueType fonts, the newer `xelatex` does. Add the following line on the very top in your master file:
 
-        ```latex
         %!TEX program = xelatex
-        ```
 
 3. Define the font family. This is done by the first block in the `_settings.tex` file.
 
