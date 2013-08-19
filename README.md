@@ -118,3 +118,9 @@ To get this running, you need to follow four steps:
         \RobotoSlab
 
     One example for using it is in the title page (`_titlepage.tex`).
+
+Screenshots
+------------------
+![Titelpage](http://senfi.github.io/LaTeX-Template/Screenshots/titel.png "Titelpage")
+![Content](http://senfi.github.io/LaTeX-Template/Screenshots/content.png "Content")
+![Chapter](http://senfi.github.io/LaTeX-Template/Screenshots/chapter.png "Chapter")
