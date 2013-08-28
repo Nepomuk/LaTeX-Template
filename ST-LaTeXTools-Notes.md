@@ -52,7 +52,7 @@ They have different meaning when invoked in regular text or in math environment.
 So, this might a **master table** to print out and learn by heart.
 
 | Tab completion  | `⌘+l,x` command | Text expands to           | Math expands to  | Comment | 
-| --------------- | ----------- |-------------| -----| - |
+| --------------- | ----------- |-------------| -----| --- |
 | `e⇥`,`em⇥`    | `⌘+l,⌘+e` | `\emph{}` | `\epsilon` | | 
 | `bf⇥`          | `⌘+l,⌘+b` | `\textbf{}`      |   `\mathbf{}` | | 
 | `un⇥`          | `⌘+l,⌘+u` | `\underline{}` | | | 
