@@ -1,13 +1,11 @@
-! IMPORTANT !
-=============
+# ! IMPORTANT !
 
 **This project is not yet complete. There are some features, I just didn't have time to implement yet, but are required for a proper article (like bibliography).**
 
 _This paragraph will remove itself after completion._
 
 
-LaTeX Template
-==============
+# LaTeX Template
 
 Pre-configured XeLaTeX-using LaTeX template with some useful features. And custom fonts.
 
@@ -16,8 +14,7 @@ This project is the result of year-long LaTeX stuff gathering. It might be overk
 Why you should use LaTeX, you ask? Because [it's beautiful](http://nitens.org/taraborelli/latex)! And, once set up (you're welcome!), easy to use.
 
 
-Install Fonts
--------------
+## Install Fonts
 
 One necessary step to get this example to compile is download the required fonts. In this case it is the RobotoSlab font from [Google's Web Font library](http://www.google.com/fonts/).
 
@@ -86,9 +83,7 @@ In the same manner the used compiler is selected in the master file.
 It means, it uses ´xelatex´ instead of the more common, but older ´pdflatex´. A feature that requires ´xelatex´ is the use of TrueType fonts as it is done in this project.
 
 
-LaTeX Feature List
-------------------
-
+## LaTeX Feature List
 
 ### Custom Fonts
 When designing the looks of the project you are working on, you'll notice rather quickly that your options are a bit limited. It would be especially nice to select custom fonts for headlines or the title page.
@@ -128,8 +123,7 @@ But because many functions don't work, there are basically no settings to this p
 
 
 
-Screenshots
-------------------
+## Screenshots
 ![Titelpage](http://senfi.github.io/LaTeX-Template/Screenshots/titel.png "Titelpage")
 ![Content](http://senfi.github.io/LaTeX-Template/Screenshots/content.png "Content")
 ![Chapter](http://senfi.github.io/LaTeX-Template/Screenshots/chapter.png "Chapter")
