@@ -10,7 +10,7 @@ Probably most interesting for you is the table at the end of this document.
   * `%!TEX program = xelatex` lets you chose the compilation engine. Here it is xelatex because of its custom font support.
 
 ### Features and Their Keys
-Given are the shortcuts for OS X. For windows, usually simply replace `Cmd/⌘` with `Ctrl`. Key symbols used are `⌘` for `Cmd`, `⌥` for `Alt` (/*Option*), `⌃` for `Ctrl`, `⇧` for `Shift`.
+Given are the shortcuts for OS X. For windows, usually simply replace `Cmd/⌘` with `Ctrl`. Key symbols used are `⌘` for `Cmd`, `⌥` for `Alt` (/ *Option*), `⌃` for `Ctrl`, `⇧` for `Shift`.
 
 #### Standard Sublime Text Feature
   * `⇧+⌘+p` opens up the **command palette** (easilty set *everything* from the menu with fuzzy searching)
