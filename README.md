@@ -119,6 +119,15 @@ To get this running, you need to follow four steps:
 
     One example for using it is in the title page (`_titlepage.tex`).
 
+
+
+### Type setting with `microtype`
+The [microtype](http://ctan.org/tex-archive/macros/latex/contrib/microtype) package enhances the already excellent type setting features of LaTeX by adjusting spacing between characters to improve greyness or margin kerning (protrusion, which, unfortunately, doesn't work with XeTeX right now). And some other stuff, of course.
+
+But because many functions don't work, there are basically no settings to this package right now and it is just included.
+
+
+
 Screenshots
 ------------------
 ![Titelpage](http://senfi.github.io/LaTeX-Template/Screenshots/titel.png "Titelpage")
