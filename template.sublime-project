@@ -3,6 +3,7 @@
   [
     {
       "path": "/Users/Andi/Documents/Studium/Promotion/LaTeX/LaTeX-Template",
+      // "path": "/Users/andre/Development/git/latex_template",
       "file_exclude_patterns": ["*.log", "*.out", "*.svg", "*.acn", "*.acr", "*.alg", "*.glg", "*.glo", "*.gls", "*.ist", "*.synctex.gz", "*.aux", "*fdb_latexmk", "*.pdf", "*.toc"]
     }
   ],

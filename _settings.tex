@@ -21,6 +21,25 @@
 % \setmainfont{Myriad Pro}          % Set main font to Myriad Pro (system font name)
 
 
+% configure the microtype font setting
+\microtypesetup{
+  final,        % always activate, even when in draft mode
+  % activate={true,nocompatibility},  % activate protrusion and expansion
+  factor=1100,  % increase factor for protrusion
+}
+% enable protrusion for superscript numbers
+% (doesn't work with XeTeX right now)
+% \SetProtrusion{
+%   encoding={*},
+%   family={cmr},
+%   series={*},
+%   size={6,7}
+% }{
+%   1={ ,750},2={ ,500},3={ ,500},4={ ,500},5={ ,500},
+%   6={ ,500},7={ ,600},8={ ,500},9={ ,500},0={ ,500}
+% }
+
+
 % until where should titles be enumerated?
 \setsecnumdepth{subsubsection}
 \settocdepth{subsection}
