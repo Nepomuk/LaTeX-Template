@@ -1,13 +1,9 @@
-# ! IMPORTANT !
-
-**This project is not yet complete. There are some features, I just didn't have time to implement yet, but are required for a proper article (like bibliography).**
-
-_This paragraph will remove itself after completion._
-
-
 # LaTeX Template
 
-Pre-configured XeLaTeX-using LaTeX template with some useful features. And custom fonts.
+Pre-configured LaTeX template with some useful features. Using XeTeX for custom font support.  
+Pretty much the same as the master branch, aside of all the custom font-related stuff.
+
+----
 
 This project is the result of year-long LaTeX stuff gathering. It might be overkill for small projects though. Some features are explained downwards on this document, for all the configuration look inside the files. I tried to comment everything important.
 
