@@ -1,31 +1,14 @@
 %!TEX root = template.tex
 
-% custom font definitions
-\newfontfamily\RobotoSlab[    % font family
-  Path = font/,
-  UprightFont = RobotoSlab-Light,
-  ItalicFont = RobotoSlab-Thin,
-  BoldFont = RobotoSlab-Bold,
-  BoldItalicFont = RobotoSlab-Bold
-]{RobotoSlab}
-\newfontface\RobotoSlabThin[  % font face  (currently not used)
-  Path = font/,
-  UprightFont = RobotoSlab-Thin,
-]{RobotoSlab}
-
-\newfontfamily\MyriadPro{Myriad Pro}  % Create shorthand to use Myriad Pro (system font name)
-
-% setting the default sans serif font (e.g. for headlines)
-% (assuming Helvetica is installed on your machine...)
-\setsansfont{Helvetica}
-% \setmainfont{Myriad Pro}          % Set main font to Myriad Pro (system font name)
-
-
 % configure the microtype font setting
 \microtypesetup{
   final,        % always activate, even when in draft mode
   % activate={true,nocompatibility},  % activate protrusion and expansion
   factor=1100,  % increase factor for protrusion
+  tracking=true,  % techniques used
+  kerning=true,
+  spacing=true
+  % more info on config to be found eg at http://www.khirevich.com/latex/microtype/
 }
 % enable protrusion for superscript numbers
 % (doesn't work with XeTeX right now)
@@ -82,9 +65,9 @@
   \renewcommand\printchaptername{}
   \renewcommand\printchapternum{}
   \renewcommand\printchapternonum{\chapternonumtrue}
-  \renewcommand\chaptitlefont{\RobotoSlab\fontseries{bx}%
+  \renewcommand\chaptitlefont{\fontseries{bx}%
     \fontshape{n}\fontsize{25}{35}\selectfont\raggedleft}
-  \renewcommand\chapnumfont{\RobotoSlab\fontseries{m}\fontshape{n}%
+  \renewcommand\chapnumfont{\fontseries{m}\fontshape{n}%
     \fontsize{3cm}{0in}\selectfont\color{gray75}}
   \renewcommand\printchaptertitle[1]{%
     \noindent%
@@ -114,7 +97,6 @@
 
 
 % table of contents
-\renewcommand{\cftchapterfont}{\RobotoSlab\bfseries}
 % \renewcommand{\cftsectionfont}{\fontfamily{\sfdefault}\selectfont\small}
 % \renewcommand{\cftsubsectionfont}{\fontfamily{\sfdefault}\selectfont\small}
 
