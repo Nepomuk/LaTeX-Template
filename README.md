@@ -74,6 +74,7 @@ As `latexmk` takes care for LaTeXTools to typeset the document, there's a `.late
 
 
 ## Screenshots
-![Titelpage](http://senfi.github.io/LaTeX-Template/Screenshots/titel.png "Titelpage")
-![Content](http://senfi.github.io/LaTeX-Template/Screenshots/content.png "Content")
-![Chapter](http://senfi.github.io/LaTeX-Template/Screenshots/chapter.png "Chapter")
+![Titelpage](https://raw.githubusercontent.com/Nepomuk/LaTeX-Template/master/exampleimages/template-0-shrunk.png "Titelpage")
+![Content 1](https://raw.githubusercontent.com/Nepomuk/LaTeX-Template/master/exampleimages/template-4-shrunk.png "Content 1")
+![Content 2](https://raw.githubusercontent.com/Nepomuk/LaTeX-Template/master/exampleimages/template-5-shrunk.png "Content 2")
+![Content 3](https://raw.githubusercontent.com/Nepomuk/LaTeX-Template/master/exampleimages/template-6-shrunk.png "Content 4")
