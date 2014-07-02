@@ -1,5 +1,5 @@
 # Notes On Sublime Text 2 LaTeXTools Plugin
-This exemplary LaTeX template is to be used with the [LaTeXTools plugin](https://github.com/SublimeText/LaTeXTools) for [Sublime Text 2](http://www.sublimetext.com/).  
+This LaTeX template is to be used with the [LaTeXTools plugin](https://github.com/SublimeText/LaTeXTools) for [Sublime Text](http://www.sublimetext.com/).  
 It will work with other code editing environments, but you probably have to edit the steering command in the first lines of each file (beginning with `%!`).
 
 Here are some notes on some key functions of the plugin as well as a list of commands not to be forgotten.  
@@ -13,16 +13,16 @@ Probably most interesting for you is the table at the end of this document.
 Given are the shortcuts for OS X. For windows, usually simply replace `Cmd/⌘` with `Ctrl`. Key symbols used are `⌘` for `Cmd`, `⌥` for `Alt` (/ *Option*), `⌃` for `Ctrl`, `⇧` for `Shift`.
 
 #### Standard Sublime Text Feature
-  * `⇧+⌘+p` opens up the **command palette** (easilty set *everything* from the menu with fuzzy searching)
+  * `⇧+⌘+p` opens up the **command palette** (easily set *everything* from the menu with fuzzy searching)
   * `⌘+p` will **go to anything**. Switch files with this.  
   Remember, 
     * `⌘+1` … `⌘+9` switches to tabs 1 … 9,
     * `⌥+⌘+→` and `⌥+⌘+←` will go to the tab right or left, respectively 
-  * `⌘+r` will **go to symbol**. In LaTeXTools this will let you go to every headline (`C`hapter, `S`ection, …) as well as every label (`L`) in your current file.
-  * `⌘+b` will **compile** the current LaTeX file, compiling here meaning type-setting.
+  * `⌘+r` will **go to symbol**. In LaTeXTools this will let you go to every headline (`C`hapter, `S`ection, …) as well as every label (`L`) in your current file. This is equal to `⌘+p` and writing an `@`.
+  * `⌘+b` will **build** the current LaTeX file, compiling here meaning type-setting.
 
 #### LaTeXTools Features
-LaTeXTools keys consist of two keystrokes. First off, `⌘+l` to get yourself in the LaTeXTools surroundings (*mnemonic*: `l` for LaTeX) directly followed by second key to access on particular shortcut.  
+Generally, LaTeXTools keys consist of two keystrokes. First off, `⌘+l` to get yourself in the LaTeXTools surroundings (*mnemonic*: `l` for LaTeX) directly followed by second key to access on particular shortcut.  
 Here, they are seperated by a comma, like `⌘+l,x`. First hit `⌘+l`, directly afterwards `x`.
 
   * Typing `\cite{` will open up a drawer to search for **citation** names in your BibTeX.bib file specified in `\bibliography{}` (it is disableable)
@@ -45,8 +45,8 @@ Most of the following commands wrap selected text in commands. If there's no wor
   * `⌘+l,e` replaces the current word with an **environment** based on the word -- hitting the keystroke after `align` will give you `\begin{align} … \end{align}`
 
 ##### Tab Completion
-Additionally to the `⌘+l` shortcuts, there are the usual Sublime Text `Tab/⇥` completion operations.  
-Here are some of the more interesting ones, for all of them look into `~/Library/Application Support/Sublime Text 2/Packages/LaTeXTools/LaTeX math.sublime-completions` and `LaTeX.sublime-completions` (you find the directory by going to `Sublime Text 2 → Preferences → Browse Packages` in your Sublime Text menu bar) or look to the code online ([1](https://github.com/SublimeText/LaTeXTools/blob/master/LaTeX%20math.sublime-completions), [2](https://github.com/SublimeText/LaTeXTools/blob/master/LaTeX.sublime-completions)).
+Additionally to the `⌘+l` shortcuts, there are the usual Sublime Text `Tab` (`⇥`) completion operations.  
+Here are some of the more interesting ones, for all of them look into `~/Library/Application Support/Sublime Text 2/Packages/LaTeXTools/LaTeX math.sublime-completions` and `LaTeX.sublime-completions` (you find the directory by going to `Sublime Text → Preferences → Browse Packages` in your Sublime Text menu bar) or look to the code online ([1](https://github.com/SublimeText/LaTeXTools/blob/master/LaTeX%20math.sublime-completions), [2](https://github.com/SublimeText/LaTeXTools/blob/master/LaTeX.sublime-completions)).
 
 They have different meaning when invoked in regular text or in math environment. Additionally, I included the `⌘+l,x` commands from above.  
 So, this might a **master table** to print out and learn by heart.
