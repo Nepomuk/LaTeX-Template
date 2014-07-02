@@ -1,6 +1,6 @@
 # LaTeX Template
 
-Pre-configured LaTeX template with some useful features. The basis for our PhD theses (in High Energy Physics, you will notice).
+Pre-configured LaTeX template with some useful features. The basis for our PhD theses (in High Energy Physics, you will notice). Quickstart: Look [at the PDF](https://github.com/Nepomuk/LaTeX-Template/blob/master/template.pdf).
 
 A previous version of this document used XeTeX with custom fonts. We decided to discontinue custom fonts (and, with this, XeTeX) and switch back to pdflatex. You still can find the custom font files in the [xetex branch](https://github.com/Nepomuk/LaTeX-Template/tree/xetex) of this repo and some more info [in Andrés blogpost](http://drlog.andregoerres.de/use-truetype-fonts-with-latex/).
 
