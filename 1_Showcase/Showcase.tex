@@ -1,10 +1,197 @@
 %!TEX root = ../template.tex
 
-Welcome everyone! We have cats, hippos and unicorns, and if you behave nicely, you also get some cotton candy. In the meantime, let me say just a couple of words.
+Welcome everyone! Following is a small showcase of some features of this document. It's probably incomplete. But, hey, you can fix it if you want.
 
-Cupcake ipsum dolor sit. Amet toffee I love powder drag\'{e}e. I love drag\'{e}e I love sweet. Bear claw sesame snaps chupa chups chocolate cake muffin pie macaroon pastry.\\
-Cookie chocolate bar I love marshmallow chocolate bar macaroon sweet. Gummies ice\footnote{Just a small test for protrusion. Unfortunately, with XeTeX it doesn't work right now.} cream halvah brownie. Jelly beans macaroon pudding caramels cotton candy croissant pastry.
+\section{\texttt{memoir} Document Class} % (fold)
+\label{sec:memoir_document_class}
+This document makes use of the \texttt{memoir} document class. It is highly customizable and already delivers a lot of functionality usually only available when including dedicated packages.
 
-Fo \textbf{shizzle} ipsizzle \emph{dolor} sit yippiyo, consectetuer adipiscing uhuh ... yih!. Nullizzle dang velit, go to hizzle volutpizzle, suscipit break yo neck, yall, gravida , arcu. Pellentesque i saw beyonces tizzles and my pizzle went crizzle tortor. Sizzle erizzle. Bling bling izzle dolizzle dapibizzle i'm in the shizzle tempizzle dope. Maurizzle pellentesque nibh et turpis. Black in shut the shizzle up. Ma nizzle i'm in the shizzle shit dope. Own yo' its fo rizzle yo mamma shit dictumst. Hizzle dapibus. Owned tellus urna, pretizzle shiz, mattizzle ac, bizzle fo shizzle, nunc. Crazy crazy. Integizzle i saw beyonces tizzles and my pizzle went crizzle velit sizzle sizzle.
+The \href{http://www.tex.ac.uk/ctan/macros/latex/contrib/memoir/memman.pdf}{documentation (PDF)} is quite \emph{extensive} (with \emph{extensive} being an euphemism) -- we haven't read it up to now. There's probably some stuff we're missing out on. For the rest, there are examples following.
+
+\subsection{Subfigures} % (fold)
+Figures with subfigures are possible with \texttt{memoir}, when invoking \verb|subbottom|. Fig~\ref{fig:bothfigures} shows an example, Subfig.~\ref{fig:bothfigures:first} and Subfig.~\ref{fig:bothfigures:second} more directly.
+\label{sub:subfigures}
+\begin{figure}[h!]
+	\centering
+	\subbottom[This picture shows the first letter of the alphabet. Commonly known as \emph{A}.]{
+		\label{fig:bothfigures:first}
+		\includegraphics[width=0.45\linewidth]{example-image-a}
+	}
+	\subbottom[Contrary to Fig.~\ref{fig:bothfigures:first}, this is a letter called \emph{B}.]{
+		\label{fig:bothfigures:second}
+		\includegraphics[width=0.45\linewidth]{example-image-b}
+	}
+	\caption{\label{fig:bothfigures}Both images, the first and the second one, can have a united caption. This is it.}
+\end{figure}
+% subsection subfigures (end)
+% section memoir_document_class (end)
+
+\section{Microtyping} % (fold)
+\label{sec:microtyping}
+The \href{http://ctan.org/pkg/microtype}{\texttt{microtype} package} improves letter spacing and stuff.
+
+\microtypesetup{expansion=false}
+\microtypesetup{protrusion=false}
+\microtypesetup{kerning=false}
+\microtypesetup{spacing=false}
+\microtypesetup{disable}
+\textbf{Microtyping disabled}. The theory which is sketched in the following pages forms the most wide-going generalization conceivable of what is at present known as the \emph{theory of Relativity}; this latter theory I differentiate from the former \emph{Special Relativity theory}, and suppose it to be known. The generalization of the Relativity theory has been made much easier through the form given to the special Relativity theory by Minkowski, which mathematician was the first to recognize clearly the formal equivalence of the space like and time-like co-ordinates, and who made use of it in the building up of the theory.
+
+\microtypesetup{enable}
+\microtypesetup{expansion=true}
+\microtypesetup{protrusion=true}
+\microtypesetup{kerning=true}
+\microtypesetup{spacing=true}
+\textbf{Microtyping enabled}. The theory which is sketched in the following pages forms the most wide-going generalization conceivable of what is at present known as the \emph{theory of Relativity}; this latter theory I differentiate from the former \emph{Special Relativity theory}, and suppose it to be known. The generalization of the Relativity theory has been made much easier through the form given to the special Relativity theory by Minkowski, which mathematician was the first to recognize clearly the formal equivalence of the space like and time-like co-ordinates, and who made use of it in the building up of the theory.
+% section microtyping (end)
+ 
+\section{Equations \& Symbols} % (fold)
+\label{sec:equations}
+This is how a equation looks like in this document:
+\begin{align}
+	\int 5 \dif x = y_o \times u^r \frac{m 0}{m}
+\end{align}
+Notice that for the differential operator the upright d is used with $\dif x$ (\verb|\dif x|) -- x stays in italics, as it should be.
+
+\subsection{List of Symbols} % (fold)
+\label{sub:list_of_symbols}
+Two packages are included to provide extra symbols.
+\begin{description}
+	\item[\texttt{amssymb}] A list of the mathematical symbols provided by this packages from the American Mathematical Society can be found \href{http://milde.users.sourceforge.net/LUCR/Math/mathpackages/amssymb-symbols.pdf}{here (PDF)}. Notable examples are: $\hat{x}$ (\verb|\hat{x}|), $\circlearrowleft$ (\verb|\circlearrowleft|), $\propto$ (\verb|\propto|), $\checkmark$ (\verb|\checkmark|).
+	\item[\texttt{wasysm}] More symbols from the \texttt{wasy} font package. \href{http://ftp.gwdg.de/pub/ctan/macros/latex/contrib/wasysym/wasysym.pdf}{Complete list (PDF)}; notable examples: $\varint$ (\verb|\varint|; compared to $\int$ (\verb|\int|)), $\LHD$ (\verb|\LHD|), $\wasypropto$ (\verb|\wasypropto| compared to $\propto$ \verb|\propto|), {\male} \& {\female} (\verb|\male| \& \verb|\female|), {\lightning} (\verb|\lightning|), {\clock} (\verb|\clock|), {\photon} (\verb|\photon|), {\gluon} (\verb|\gluon|), {\halfnote} (\verb|\halfnote|), {\jupiter} (\verb|\jupiter|).
+\end{description}
+
+\todo{subfigures}
+% subsection list_of_symbols (end)
+% section equations (end)
+
+\section{Units with siunitx} % (fold)
+\label{sec:units_with_siunitx}
+Included is a package, \texttt{siunitx} (\url{http://www.ctan.org/pkg/siunitx}), which will format numbers and numbers with units for you. As long as you use the correct commands, of course. Following are a few examples.
+\begin{itemize}
+	\item \num{10000} (\verb|\num{10000}|) has the correct thousander spacing
+	\item \num{2 x e7} (\verb|\num{2 x e7}|) converts the x to a \verb|\times| and e7 to $10^7$
+	\item \numrange{10}{20} (\verb|\numrange{10}{20}|) prints a range
+	\item \SI{10}{\metre} (\verb|\SI{10}{\metre}|) takes care of inserting the right abbreviation, spacing and stuff, interesting especially for \SI{10}{\percent} or \SI{10}{\degree}
+	\item \SI{2}{\per\femto\barn} (\verb|\SI{2}{\per\femto\barn}|) is the default standard for division in this document, though it can be overridden by \SI[per-mode=reciprocal]{2}{\per\femto\barn}
+	\item \SI{>> 5}{\kilogram\squared\per\meter\cubed\per\hour} also looks nice \\
+	(\verb|\SI{>> 5}{\kilogram\squared\per\meter\cubed\per\hour}|)
+	\item \SI[per-mode=fraction]{10 +- 0.56}{\kilogram\per\MeV} errors and in-line fractions are also possible\\
+	(\verb|\SI[per-mode=fraction]{10 +- 0.56}{\kilogram\per\MeV}|) 
+	\item For aligning numbers in tables, use \verb|\begin{tabular}{S}|
+\end{itemize}
+% section units_with_siunitx (end)
+
+\section{Feynman Graphs with \texttt{feynmf}} % (fold)
+\label{sec:feynman_graphs_with_feynmf}
+Quite easy to compose, but takes a bit to compile the first time (as the feynman graph is generated). Once it's there, though, the document's compilation time is fast again.
+
+Some more examples are available at\newline
+\url{http://szczypka.web.cern.ch/szczypka/guides/latex/feynmp.html}.
+
+\begin{fmffile}{diagram}
+\begin{fmfgraph*}(120,80)
+    \fmfleft{i1,i2}
+    \fmfright{o1,o2}
+    \fmf{fermion}{i1,v1,o1}
+    \fmf{fermion}{i2,v2,o2}
+    \fmf{photon}{v1,v2}
+\end{fmfgraph*}
+\end{fmffile}
+% section feynman_graphs_with_feynmf (end)
+
+\section{Feynman Notation, Bra-Ket, Cancel} % (fold)
+\label{sec:feynman_notation}
+To slash a single letter, write $\slashed{D}$ (\verb|$\slashed{D}$|), to cancel a whole word do \cancel{word}\newline
+ (\verb|\cancel{word}|).
+
+The bra-ket state notation can be achieved by $\bra{\phi}$ (\verb|\bra{\phi}|)\newline or $\braket{\phi | H | \phi}$ (\verb%braket{\phi | H | \phi}%).
+% section feynman_notation (end)
+
+\section{Particle Names with \texttt{hepparticles} and \texttt{hepnames}} % (fold)
+\label{sec:particle_names_with_hepnames}
+The \href{http://www.ctan.org/pkg/hepparticles}{hepparticles package} provides an abstract interface to high energy physics particles. \texttt{hepnames} gets more concrete and defines shorthands for them. Once in the PEN (Particle Entity Notation) scheme, once in an easier, \emph{nicer} scheme. \texttt{PEN} is shorter, \texttt{nicenames} is more verbose.
+
+As particle names should be printed upright (as long as they don't declare a general category of particles), the greek letter symbols for Pions, Rho and Eta mesons have been replaced by their upright version.
+\begin{description}
+	\item[Comparison nice vs. PEN] Using the nice names means speaking out the particle as you would, prepending it with a P for particle, or AP for antiparticle. Examples: \APdown (\verb|\APdown|), \PJpsi (\verb|\PJpsi|), \PBminus (\verb|\PBminus|), \Pphoton (\verb|\Pphoton|).\newline
+	Using the PEN names means, identifying the particle due to its structure. Example \Paqd (\verb|\Paqd|), \PJgy (\verb|\PJgy|), \PBm (\verb|\PBm|), \Pgg (\verb|\Pgg|).\newline
+	See the \href{http://ftp.gwdg.de/pub/ctan/macros/latex/contrib/hepnames/hepnames.pdf}{documentation of \texttt{hepnames}} for a complete list.
+	\item[Declaring own particles] Using the raw \texttt{hepparticles} package, custom particles can be specified. The excited sun particle with a charm quark would, e.g., would be \HepParticle{\astrosun}{0}{*}\xspace (\verb|\HepParticle{\astrosun}{c}{*}|).
+	\item[Reaction processes] The macro \verb|\HepProcess{}| takes care of organizing particles of a reaction put inside. Be sure to use \verb|\HepTo| instead of \verb|\to|, tough.\newline
+	\HepProcess{\APproton \Pproton \HepTo \PDplus \PDminus \HepTo \PKminus \Ppiminus \Ppiminus \PKplus \Ppiplus \Ppiplus}\newline
+	(\verb|\APproton \Pproton \HepTo \PDplus \PDminus \HepTo \PKminus|\newline
+	\verb|\Ppiminus \Ppiminus \PKplus \Ppiplus \Ppiplus|)
+\end{description}
+% section particle_names_with_hepnames (end)
+
+\section{Bibliography with Custom Style} % (fold)
+\label{sec:bibliography_with_custom_style}
+At the end of this document you find an example citation~\cite{panda:stttdr_epja} with a custom style.
+
+The idea: My BibTeX file should have all the authors included, but displayed should be only the first three. Additionally to the collaboration they are working in. Also, eprint (still missing) and DOI number should be given and linked. This is a cumbersome project and not yet finished. The style you see in~\cite{panda:stttdr_epja} is merely a first iteration.
+
+Side note: This bib style makes use of small caps in font (\verb|\sc|) which are not available in the free version of the Bitstream Charter typeface. For this, a pro commercial version is needed. Either get this or live with fake small caps\ldots
+% section bibliography_with_custom_style (end)
 
 % \printglossary[type=\acronymtype,style=altlist,title={List of Acronyms},toctitle={TOC List of Acronyms}] % For future references
+
+\section{Acronyms and Other \texttt{glossaries}} % (fold)
+\label{sec:glossaries}
+
+The glossaries package is used in \gls{gls:template} (\verb|\gls{gls:template}|) to define general glossary entries and different acronyms specifically. Like \gls{jama} (\verb|gls{jama}|), which is automatically abbreviated when used for a second time, like this: \gls{jama} (\verb|gls{jama}|).
+
+\subsection{Different Glossaries} % (fold)
+\label{sub:different_glossaries_acronyms_and_titles}
+The \texttt{glossaries} package is loaded with the \texttt{acronym} option, creating a second, additional glossary specially for acronyms. When defining acronym glossary entries, \verb|\newacronym{}| is used, in contrast to the more general \verb|\newglossaryentry{}| command to define arbitrary glossary entries. The main glossary can be populated with \verb|\newglossaryentry{gls:entry}|, \texttt{gls} identifies the main one.
+
+Have a look at \verb|_settings.tex|.
+% subsection different_glossaries_acronyms_and_titles (end)
+
+\subsection{Printing Glossaries} % (fold)
+\label{sub:printing_glossaries}
+Both glossaries are printed at the end of the document via the \verb|\printglossaries| command. If you only want to print out one glossary, use \verb|\printglossary[type=\acronymtype]| or \verb|\printglossary[type=main]|.
+
+The titles are chosen automatically. To change them, uncomment the corresponding lines in \verb|_settings.tex|, change \verb|\myacronymtitle| to your wished title, and uncomment the \verb|\printglossary| version in the \texttt{template.tex} file with the \texttt{toc} specifier.
+% subsection printing_glossaries (end)
+
+\subsection{Indexing with \texttt{latexmk}} % (fold)
+\label{sub:indexing_with_latexmk}
+Usually, an additional call of \texttt{makeindex} is needed when typesetting the glossaries to create the list. \texttt{glossaries}	offers a specialized perl script calling \texttt{makeindex} with the right parameters: \texttt{makeglossaries}.
+
+To automate this process, \texttt{latexmk}, used by Sublime Text 3 to typeset \LaTeX, offers with a \texttt{.latexmkrc} file the well-known dotfile configuration possibility of many command line programs. \Gls{gls:template} has a \texttt{.latexmkrc} included taking care of all the glossaries compilation stuff.
+% subsection indexing_with_latexmk (end)
+% section glossaries (end)
+
+\section{Misc} % (fold)
+\label{sec:misc}
+There are more packages included and features activated in this template.
+\paragraph{\texttt{listings}} % (fold)
+\label{par:listings}
+Used for code highlight blocks. Generally, also provides multi-line environments for un-interpreted code.
+% paragraph listings (end)
+\paragraph{\texttt{hyperref}} % (fold)
+\label{par:hyperref}
+To provide hyperlinks inside the document and links to web resources. Also sets meta info for the PDF document.
+% paragraph hyperref (end)
+\paragraph{\texttt{pdflscape}} % (fold)
+\label{par:pdflscape}
+Rotates single pages into landscape view inside the PDF. Such pages should be in a rotation environment in the tex code.
+% paragraph pdflscape (end)
+\paragraph{\texttt{rotating}} % (fold)
+\label{par:rotating}
+For rotating single images, if rotating the whole page is out of the picture.
+% paragraph rotating (end)
+\paragraph{\texttt{booktabs}} % (fold)
+\label{par:booktabs}
+Better tables.
+% paragraph booktabs (end)
+\paragraph{\texttt{multirow}} % (fold)
+\label{par:multirow}
+To combine rows of a table to one.
+% paragraph multirow (end)
+\paragraph{\texttt{wrapfig}} % (fold)
+\label{par:wrapfig}
+To wrap text around pictures (\emph{floating}).
+% paragraph wrapfig (end)
+% section misc (end)
