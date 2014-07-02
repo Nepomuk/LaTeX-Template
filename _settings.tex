@@ -3,13 +3,14 @@
 % configure the microtype font setting
 \microtypesetup{
   final,        % always activate, even when in draft mode
-  % activate={true,nocompatibility},  % activate protrusion and expansion
-  factor=1100,  % increase factor for protrusion
+  activate={true,nocompatibility},  % activate protrusion and expansion
   tracking=true,  % techniques used
   kerning=true,
-  spacing=true
+  spacing=true,
+  protrusion=true
   % more info on config to be found eg at http://www.khirevich.com/latex/microtype/
 }
+\microtypecontext{spacing=nonfrench}
 % enable protrusion for superscript numbers
 % (doesn't work with XeTeX right now)
 % \SetProtrusion{
@@ -45,17 +46,30 @@
 \definecolor{gray90}{gray}{0.90}
 \definecolor{darkblue}{rgb}{0,0,0.5}
 \definecolor{darkgreen}{rgb}{0,0.5,0}
+\definecolor{green}{rgb}{0.2,0.8,0.2}
+\definecolor{red}{rgb}{1.0,0.3,0.0}
+\definecolor{orange}{rgb}{1.0,0.6,0.0}
 
 
 % some PDF settings (like hyperlinks in color)
 \hypersetup{
+ % pdftex,                   % use pdftex backend
  pdftitle={\Title},        % title
  pdfauthor={\Author},      % author
+ bookmarksnumbered=true,   % put section numbers in bookmarks
+ % linktocpage=true,         % make page number (not text) be link on TOC
+ % pdfpagelabels=true,       % set PDF page labels
  colorlinks=true,          % false: boxed links; true: colored links
  linkcolor=darkblue,       % color of internal links
  citecolor=darkblue,       % color of links to bibliography
  filecolor=darkblue,       % color of file links
  urlcolor=darkblue         % color of external links
+}
+
+% settings for siunitx, see http://www.ctan.org/pkg/siunitx
+\sisetup{
+  per-mode = symbol,       % creates a backslash for division as default, can be overridden individually
+  separate-uncertainty = true  % dont use "10.0(1)" notation for uncertainties, but do use "10.0 \pm 0.1"
 }
 
 
@@ -89,11 +103,12 @@
 
 
 % other title definitions
-\setsecheadstyle{\fontfamily{\sfdefault}\Large\bfseries}
-\setsubsecheadstyle{\fontfamily{\sfdefault}\large\bfseries}
-\setsubsubsecheadstyle{\fontfamily{\sfdefault}\bfseries}
-\setparaheadstyle{\fontfamily{\sfdefault}\bfseries}
-\setsubparaheadstyle{\fontfamily{\sfdefault}\bfseries}
+% change the following to switch to sans serif title styles
+% \setsecheadstyle{\fontfamily{\sfdefault}\Large\bfseries}
+% \setsubsecheadstyle{\fontfamily{\sfdefault}\large\bfseries}
+% \setsubsubsecheadstyle{\fontfamily{\sfdefault}\bfseries}
+% \setparaheadstyle{\fontfamily{\sfdefault}\bfseries}
+% \setsubparaheadstyle{\fontfamily{\sfdefault}\bfseries}
 
 
 % table of contents
@@ -106,7 +121,46 @@
 \captionnamefont{\small\bfseries}
 \indentcaption{10pt}
 
+% Subfloats for figures (memoir option)
+\newsubfloat{figure}
 
 % rotate labels from showlabels to make them fit on the margin
 \renewcommand{\showlabelfont}{\scriptsize\ttfamily}
 \renewcommand{\showlabelsetlabel}[1]{\begin{turn}{60}\showlabelfont #1\end{turn}}
+
+% change greek particle names to their upright font, as particles should be upright
+\renewcommand{\Pgp}{\HepParticle{\piup}{}{}\xspace} % pionparticle family)
+\renewcommand{\Pgppm}{\HepParticle{\piup}{}{\pm}\xspace} % charged pion
+\renewcommand{\Pgpmp}{\HepParticle{\piup}{}{\mp}\xspace} % charged pion
+\renewcommand{\Pgpm}{\HepParticle{\piup}{}{-}\xspace} % negative pion
+\renewcommand{\Pgpp}{\HepParticle{\piup}{}{+}\xspace} % positive pion
+\renewcommand{\Pgpz}{\HepParticle{\piup}{}{0}\xspace} % neutral pion
+\renewcommand{\Pgp}{\HepParticle{\piup}{}{}\xspace}
+
+\renewcommand{\Pgr}{\HepParticle{\rhoup}{}{}\xspace} % resonance removed
+\renewcommand{\Pgrp}{\HepParticle{\rhoup}{}{+}\xspace}
+\renewcommand{\Pgrm}{\HepParticle{\rhoup}{}{-}\xspace}
+\renewcommand{\Pgrpm}{\HepParticle{\rhoup}{}{\pm}\xspace}
+\renewcommand{\Pgrmp}{\HepParticle{\rhoup}{}{\mp}\xspace}
+\renewcommand{\Pgrz}{\HepParticle{\rhoup}{}{0}\xspace}
+
+\renewcommand{\Pgh}{\HepParticle{\etaup}{}{}\xspace}
+\renewcommand{\Pghpr}{\HepParticle{\etaup}{}{\prime}\xspace}
+\renewcommand{\Pcgh}{\HepParticle{\etaup}{\Pqc}{}\xspace}
+
+% Bibliography options
+\bibliographystyle{custom}
+
+% Glossaries options
+\renewcommand*{\glspostdescription}{}  % redefine the character displayed after an glossary entry from dot to nothing
+\makeglossaries  % ensure glossary files are created
+\glstoctrue  % Put glossaries into TOC
+% to change the title of your acronyms uncomment the following lines and the correspoinding \makeglossaries in the main document
+% \providecommand{\myacronymtitle}{List of Acronyms}
+% \addto\captionsenglish{%
+%   \renewcommand{\acronymname}{\myacronymtitle}
+% }
+
+% Makes the header not italics
+\makeevenhead{headings}{\thepage}{}{\leftmark}
+\makeoddhead{headings}{\rightmark}{}{\thepage}

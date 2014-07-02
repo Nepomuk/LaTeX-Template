@@ -20,15 +20,29 @@
 \usepackage[english]{babel}   % English language package
 
 % font and symbols
+\usepackage[bitstream-charter]{mathdesign} % Bitstream Character font, not-italic greek letter like \alphaup
 \usepackage{microtype}        % better type setting
-\usepackage{amssymb,amsmath}  % more math symbols and environments
+% \usepackage{amssymb,amsmath}  % more math symbols and environments % mathdesign interferes with amssymb
 % \usepackage{textcomp}         % even more special characters
 \usepackage{tikz}             % used to make circled numbers
 \usepackage{color}            % define your own colors
 \usepackage{scrhack}          % fixes an error caused by listings package
 \usepackage{listings}         % enables syntax highlighting for your code
-% \usepackage{helvet}           % change the font for titles
-% \usepackage{xltxtra}			% XeLaTeX extras package, provides some useful extras, in particular the fontspec package
+
+% references
+% \usepackage[backend=biber]{biblatex}
+
+% physics and maths
+\usepackage{amsmath}
+\usepackage{wasysym}          % glyphs and other symbols, e.g. \int, http://www.ctan.org/pkg/wasysym
+\usepackage{siunitx}          % macros for printing numbers (\num{12345}) and units (\SI{1e7}{\kilogram\per\metre\squared}), also interesting: \SIrange{10}{30}{\metre}, \mega\electronvolt, \DeclareSIUnit. \per can be set individually via SI[per-mode=reciprocal], or per-mode-fraction to overwrite the new default in the next line; http://www.ctan.org/pkg/siunitx
+\usepackage{commath}          % defines differential operators (\del, \dif)
+\usepackage{feynmf}           % Feynman diagrams
+\usepackage{cancel, slashed}  % Feynman notation
+% \usepackage{maybemath}        % For context-sensitive maths, like headings
+\usepackage{hepparticles}     % particle names
+\usepackage{hepnames}         % shortcuts for lots of particle names
+\usepackage{braket}           % provides \bra and \ket notation
 
 % configuration
 \usepackage{hyperref}         % hyperlinks in PDF
@@ -40,7 +54,7 @@
 \usepackage{graphicx}         % include graphics
 \usepackage{rotating}         % rotate images
 % \usepackage{caption}          % customize your captions (memoir incompatible)
-% \usepackage{subfig}           % sub-captions (memoir incompatible)
+% \usepackage{subfig}           % sub-captions (memoir incompatible, already included there with \subbottom)
 \usepackage{wrapfig}          % wrap text around images and tables
 
 % table stuff
@@ -51,12 +65,11 @@
 % additional packages (mixed)
 % \usepackage{keystroke}        % display keystrokes
 \usepackage{xspace}           % adds spaces to the end of commands if needed
+\usepackage{pdflscape}        % allows for landscaped, pdf-rotated single pages
+\usepackage[acronym,nonumberlist,xindy]{glossaries}  % glossaries % xindy is used for sorting non-latin characters correctly
 
 % packages that help during draft versions
 % (change document option from draft to final to disable)
 \usepackage[obeyDraft,textsize=scriptsize]
   {todonotes}                 % notes and missing images
 \usepackage{showlabels}       % show label names next to numbering
-
-% \usepackage{glossaries} % added http://en.wikibooks.org/wiki/LaTeX/Glossary
-% \makeglossaries

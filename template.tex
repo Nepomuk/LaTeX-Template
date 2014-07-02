@@ -13,12 +13,12 @@
 % ======================================================= %
 
 % draft or final?
-\newcommand{\status}{draft}
+\newcommand{\status}{final}
 
 % The most general information for this document
 \newcommand{\Title}{An Article About the Correlation of Random Words with Alpha Male Gorillas and Rainbow-colored Highland Unicorns}
 \newcommand{\Author}{The Doctor, PhD}
-\newcommand{\keywords}{LaTeX, template, Sublime Text 2, keyword, unicorns}
+\newcommand{\keywords}{LaTeX, template, Sublime Text 3, keyword, unicorns}
 
 
 % load the general configuration
@@ -26,6 +26,7 @@
 \input{_settings}
 \input{_newcommands}
 
+% \addbibresource{references.bib}  % Use with BibLaTeX 
 
 % -------------------------------------------------- %
 %    title, TOC, ...                                 %
@@ -34,6 +35,8 @@
 % begin the document
 \begin{document}
 \frontmatter
+
+\include{glossaries}
 
 % the title page
 \input{_titlepage}
@@ -44,6 +47,7 @@
 \microtypesetup{protrusion=true}  % enables protrusion again
 \newpage
 
+% load glossaries
 
 % -------------------------------------------------- %
 %    the main content                                %
@@ -51,10 +55,9 @@
 
 \mainmatter
 
-
-\chapter{Introduction}
-\label{s:introduction}
-\input{1_Introduction/Introduction} 
+\chapter{Showcase}
+\label{s:showcase}
+\input{1_Showcase/Showcase} 
 
 \chapter{Unicorns}
 \input{2_Unicorns/Unicorns}
@@ -65,6 +68,12 @@
 % -------------------------------------------------- %
 
 \backmatter
+
+\bibliography{references}  % use with BibTeX
+% \printbibliography  % use with BibLaTeX
+
+% \printglossary[type=\acronymtype, toctitle=\myacronymtitle]  % print only one glossary, and define its title (\myacronymtitle is defined in _settings.tex)
+\printglossaries  % print all glossaries available
 
 
 \end{document}
