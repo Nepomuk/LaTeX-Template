@@ -1,15 +1,61 @@
 {
-  "folders":
-  [
-    {
-      "path": "/Users/Andi/Documents/Studium/Promotion/LaTeX/LaTeX-Template",
-      // "path": "/Users/andre/Development/git/latex_template",
-      "file_exclude_patterns": ["*.log", "*.out", "*.svg", "*.acn", "*.acr", "*.alg", "*.glg", "*.glo", "*.gls", "*.ist", "*.synctex.gz", "*.aux", "*fdb_latexmk", "*.pdf", "*.toc"]
-    }
-  ],
-  "settings":
-  {
-    "spell_check": true,
-    "dictionary": "Packages/Language - English/en_US.dic"
-  }
+	"folders":
+	[
+		{
+			"file_exclude_patterns":
+			[
+				"*.log",
+				"*.out",
+				"*.svg",
+				"*.acn",
+				"*.acr",
+				"*.alg",
+				"*.glg",
+				"*.glo",
+				"*.gls",
+				"*.ist",
+				"*.synctex.gz",
+				"*.aux",
+				"*fdb_latexmk",
+				"*.pdf",
+				"*.toc",
+				"*.sublime-workspace",
+				"*.log",
+				"*.aux",
+				"*.toc",
+				"*.out",
+				"*.fdb_*",
+				"*.gz",
+				"*.bbl",
+				"*.bcf",
+				"*.blg",
+				"*.acn",
+				"*.acr",
+				"*.alg",
+				"*.glg",
+				"*.glo",
+				"*.gls",
+				"*.ist",
+				"*.glsdefs",
+				"*.run.xml",
+				"*.xdy",
+				"*.600pk",
+				"*.mf",
+				"*.tfm",
+				"*.mp",
+				"*.t1"
+			],
+			"follow_symlinks": true,
+			"path": "."
+		},
+		{
+			"follow_symlinks": true,
+			"path": "exampleimages/makePNGs.workflow"
+		}
+	],
+	"settings":
+	{
+		"dictionary": "Packages/Language - English/en_US.dic",
+		"spell_check": true
+	}
 }

@@ -8,6 +8,11 @@
 *.fdb_*
 *.gz
 
+# automatically generated bibtex stuff
+*.bbl
+*.bcf
+*.blg
+
 # automatically generated glossary stuff
 *.acn
 *.acr
@@ -16,3 +21,13 @@
 *.glo
 *.gls
 *.ist
+*.glsdefs
+*.run.xml
+*.xdy
+
+# feynmf auto files
+*.600pk
+*.mf
+*.tfm
+*.mp
+*.t1
