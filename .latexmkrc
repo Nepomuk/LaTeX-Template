@@ -12,6 +12,6 @@ sub run_makeglossaries {
     system "makeglossaries '$_[0]'";
   };
 }
-push @generated_exts, 'glo', 'gls', 'glg';
+push @generated_exts, 'glo', 'gls', 'glg', 'glsdefs';
 push @generated_exts, 'acn', 'acr', 'alg';
 $clean_ext .= ' %R.ist %R.xdy';
