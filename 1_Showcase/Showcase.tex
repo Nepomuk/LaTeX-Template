@@ -82,12 +82,14 @@ Included is a package, \texttt{siunitx} (\url{http://www.ctan.org/pkg/siunitx}),
 \end{itemize}
 % section units_with_siunitx (end)
 
-\section{Feynman Graphs with \texttt{feynmf}} % (fold)
-\label{sec:feynman_graphs_with_feynmf}
-Quite easy to compose, but takes a bit to compile the first time (as the feynman graph is generated). Once it's there, though, the document's compilation time is fast again.
+\section{Feynman Graphs with \texttt{feynmp}} % (fold)
+\label{sec:feynman_graphs_with_feynmp}
+Quite easy to compose, but takes a bit of time to compile for the first time (as the feynman graph is generated). Once it's there, though, the document's compilation time is fast again.
 
 Some more examples are available at\newline
 \url{http://szczypka.web.cern.ch/szczypka/guides/latex/feynmp.html}.
+
+This package now uses \texttt{feynmp} instead of \texttt{feynmf}, using proper vector graphics of Feynman graphs instead of bitmaps. To be more precise, it uses \texttt{feynmp-auto} to automate the intermediate \texttt{mpost} out of the \LaTeX{} compilation chain. This is possible, usually, with \LaTeX{} version from 2012 onwards. If you encounter problems, consider switching to plain \texttt{feynmp}\footnote{With an \texttt{mpost} call in between two pdfLaTeX calls and an additional DeclareGraphicsRule to process \texttt{mps} files (e.g. \href{http://bit.ly/1oWv8Li}{from the history of this template} or the Interwebs.)} or even the bitmappy \texttt{feynmf} version, without any additional tools.
 
 \begin{fmffile}{diagram}
 \begin{fmfgraph*}(120,80)
@@ -98,7 +100,7 @@ Some more examples are available at\newline
     \fmf{photon}{v1,v2}
 \end{fmfgraph*}
 \end{fmffile}
-% section feynman_graphs_with_feynmf (end)
+% section feynman_graphs_with_feynmp (end)
 
 \section{Feynman Notation, Bra-Ket, Cancel} % (fold)
 \label{sec:feynman_notation}
