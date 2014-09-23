@@ -156,7 +156,21 @@ Both glossaries are printed at the end of the document via the \verb|\printgloss
 
 The titles are chosen automatically. To change them, uncomment the corresponding lines in \verb|_settings.tex|, change \verb|\myacronymtitle| to your wished title, and uncomment the \verb|\printglossary| version in the \texttt{template.tex} file with the \texttt{toc} specifier.
 % subsection printing_glossaries (end)
-
+\subsection{Misc Other Glossaries Stuff} % (fold)
+\label{sub:misc_other_glossaries_stuff}
+\begin{description}
+	\item[Acronym Prefix] When including \texttt{glossaries-prefix} instead of \texttt{glossaries}, the package offers additionally to \verb|\gls{}| a command to include a prefix into the text. \verb|\pgls{}| will print the value as set by \verb|\newacronym[prefixfirst={the~}]|. It looks like this: \Pgls{aalf}. And as a second encounter, it looks like this: \gls{aalf}.
+	\item[Additional Acronym Commands] Besides the main \verb|\gls{}| command, there are a few more. 
+	\begin{itemize}
+	 	\item \verb|\Gls{}| to capitalize the first letter, if expanded. 
+	 	\item \verb|\glspl{}| to display the plural form (this usually means appending an s to the word, but can be specified explicitly).
+	 	\item \verb|\acrshort{}| will print only the short form of the acronym.
+	 	\item \verb|\acrlong*{}| will print only the long version, the asterisk avoiding linkage.
+	 \end{itemize}
+	 \item[First Use] When defining an acronym, \texttt{glossaries} prefixed the keyword \texttt{first}, which explicitly tells the package how the first, the expanded encounter of the acronym should look like. Use like this: \verb|\newacronym[first={\glstext*{thisAcr} (\glsdesc*{thisAcr})}]|.
+	 \item[Etc.] There are many more additional tricks in \texttt{glossaries}' pocket. Check the user guide!
+\end{description}
+% subsection misc_other_glossaries_stuff (end)
 \subsection{Indexing with \texttt{latexmk}} % (fold)
 \label{sub:indexing_with_latexmk}
 Usually, an additional call of \texttt{makeindex} is needed when typesetting the glossaries to create the list. \texttt{glossaries}	offers a specialized perl script calling \texttt{makeindex} with the right parameters: \texttt{makeglossaries}.
@@ -196,6 +210,11 @@ To combine rows of a table to one.
 \label{par:wrapfig}
 To wrap text around pictures (\emph{floating}).
 % paragraph wrapfig (end)
+\paragraph{\texttt{zi4}} % (fold)
+\label{par:texttt}
+Sets the font \texttt{Inconsolata} as the document's fixed-width font.
+
+% paragraph texttt (end)
 \subsection{\texorpdfstring{Unicode in PDF!}{Unicode: A⁺ → B⁻ π⁺}} % (fold)
 \label{sub:unicode_in_pdf_}
 Take a look at the PDF TOC / bookmarks. Calling the \texttt{hyperref} package with the \texttt{[pdfencoding=auto]} option enables the usage of Unicode characters in the PDF meta data.
