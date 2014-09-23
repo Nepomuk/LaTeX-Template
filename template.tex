@@ -31,7 +31,7 @@
 \input{_settings}
 \input{_newcommands}
 
-% \addbibresource{references.bib}  % Use with BibLaTeX
+\addbibresource{references.bib}  % Use with BibLaTeX
 
 % -------------------------------------------------- %
 %    title, TOC, ...                                 %
@@ -74,8 +74,10 @@
 
 \backmatter
 
-\bibliography{references}  % use with BibTeX
-% \printbibliography  % use with BibLaTeX
+% \bibliography{references}  % use with BibTeX
+\hypersetup{urlcolor=darkgreen}
+\printbibliography  % use with BibLaTeX
+\hypersetup{urlcolor=darkblue}
 
 % \printglossary[type=\acronymtype, toctitle=\myacronymtitle, title=\myacronymtitle]  % print only one glossary, and define its title (\myacronymtitle is defined in _settings.tex)
 \printglossaries  % print all glossaries available
