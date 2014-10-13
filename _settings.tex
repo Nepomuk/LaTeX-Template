@@ -54,7 +54,8 @@
 % some PDF settings (like hyperlinks in color)
 \hypersetup{
  % pdftex,                   % use pdftex backend
- pdftitle={\Pdftitle},        % title
+ pdfencoding=auto,         % encoding
+ pdftitle={\Pdftitle},     % title
  pdfauthor={\Author},      % author
  bookmarksnumbered=true,   % put section numbers in bookmarks
  % linktocpage=true,         % make page number (not text) be link on TOC
@@ -63,7 +64,8 @@
  linkcolor=darkblue,       % color of internal links
  citecolor=darkblue,       % color of links to bibliography
  filecolor=darkblue,       % color of file links
- urlcolor=darkblue         % color of external links
+ urlcolor=darkblue,        % color of external links
+ draft=false               % always show links, even in draft mode
 }
 
 % settings for siunitx, see http://www.ctan.org/pkg/siunitx
