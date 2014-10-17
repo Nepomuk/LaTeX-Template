@@ -164,3 +164,18 @@
 % Makes the header not italics
 \makeevenhead{headings}{\thepage}{}{\leftmark}
 \makeoddhead{headings}{\rightmark}{}{\thepage}
+
+% Customize todonotes
+% First, get rid of the rounded corners
+\makeatletter
+\tikzstyle{notestyleraw} = [
+draw=\@todonotes@currentbordercolor,
+fill=\@todonotes@currentbackgroundcolor,
+line width=0.5pt,
+text width = \@todonotes@textwidth - 1.6 ex - 1pt,
+inner sep = 0.8 ex,
+rounded corners=0pt]
+\makeatother
+% Second, change default colors
+\presetkeys{todonotes}{backgroundcolor=brightorange, bordercolor=orange,
+prepend, caption={\textbf{\textcolor{darkorange}{NOTE}}}}{}
