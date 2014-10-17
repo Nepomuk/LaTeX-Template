@@ -19,8 +19,16 @@
 % \usepackage[ngerman]{babel}   % German language package
 \usepackage[english]{babel}   % English language package
 
+% image stuff
+\usepackage[final]{graphicx}  % include graphics
+\usepackage{rotating}         % rotate images
+% \usepackage{caption}          % customize your captions (memoir incompatible)
+% \usepackage{subfig}           % sub-captions (memoir incompatible, already included there with \subbottom)
+\usepackage{wrapfig}          % wrap text around images and tables
+
 % font and symbols
-\usepackage[bitstream-charter]{mathdesign} % Bitstream Character font, not-italic greek letter like \alphaup
+\usepackage[charter]{mathdesign} % Bitstream Charter font, not-italic greek letter like \alphaup
+\usepackage[scaled=.96,lining]{XCharter} % Provides additional Charter-like symbols, and small caps
 \usepackage{microtype}        % better type setting
 % \usepackage{amssymb,amsmath}  % more math symbols and environments % mathdesign interferes with amssymb
 % \usepackage{textcomp}         % even more special characters
@@ -31,7 +39,7 @@
 \usepackage{zi4}              % Use Inconsolata for fixed-width texttt
 
 % references
-\usepackage[backend=biber]{biblatex}
+\usepackage[backend=biber,style=numeric-comp]{biblatex}
 
 % physics and maths
 \usepackage{amsmath}
@@ -46,17 +54,10 @@
 \usepackage{braket}           % provides \bra and \ket notation
 
 % configuration
-\usepackage[pdfencoding=auto]{hyperref}         % hyperlinks in PDF
+\usepackage{hyperref}         % hyperlinks in PDF
 % The two following packages don't work with the memoir style
 % \usepackage{fancyhdr}         % configure your page header
 % \usepackage[noindentafter]{titlesec}  % configure titles
-
-% image stuff
-\usepackage{graphicx}        % include graphics
-\usepackage{rotating}         % rotate images
-% \usepackage{caption}          % customize your captions (memoir incompatible)
-% \usepackage{subfig}           % sub-captions (memoir incompatible, already included there with \subbottom)
-\usepackage{wrapfig}          % wrap text around images and tables
 
 % table stuff
 \usepackage{booktabs}         % professional tables
@@ -70,9 +71,11 @@
 \usepackage[acronym,nonumberlist,xindy]{glossaries-prefix}  % glossaries % xindy is used for sorting non-latin characters correctly
 \usepackage{multicol}         % offers multi column environments
 \usepackage{ifdraft}          % offers \ifdraft{}{} command to do stuff while in draft mode
+% \usepackage{panda}            % Custom \panda package for overlining the P
+% \usepackage{gitinfo2}         % Provides infos about git (needs hooks, though)
 
 % packages that help during draft versions
 % (change document option from draft to final to disable)
 \usepackage[obeyDraft,textsize=scriptsize]
   {todonotes}                 % notes and missing images
-\usepackage{showlabels}       % show label names next to numbering
+% \usepackage{showlabels}       % show label names next to numbering
