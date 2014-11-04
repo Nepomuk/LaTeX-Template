@@ -31,6 +31,9 @@
 \renewcommand{\deg}{$\,^\circ$}
 \newcommand{\chindof}{\chi^2/\mathrm{ndof}}
 
+\newcommand{\xcal}[1]{\text{\usefont{OMS}{cmsy}{m}{n}#1}}  % Use original mathcal font instead of charters mathcal version
+\newcommand{\orderof}[1]{$\xcal{O}\left( #1 \right)$}  % \orderof{\si{\metre}} now is more beautiful
+
 % new units for siunitx package
 \DeclareSIUnit\event{ev}
 \DeclareSIUnit\channel{ch}
