@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+# Reduction of PDF file size by means of bitmap resolution lowering with Ghostscript
+# Based on this StackExchange comment: http://tex.stackexchange.com/a/41273/56326
 
 if [[ $1 == "-h" || $1 == "--help" || $1 == "help" ]]; then
 	echo "reducePdfSize.sh FILE <COMPRESSIONLEVEL>"
@@ -32,8 +34,8 @@ fi
 if [[ $2 == "low" ]]; then  # 300 dpi images, color preserving
 	level="prepress"
 fi
-if [[ $2 == "lowest" ]]; then  # /screen
-	#statements
+if [[ $2 == "lowest" ]]; then  # best possible
+	level="default"
 fi
 
 gs -sDEVICE=pdfwrite -dCompabilityLevel=1.4 -dPDFSETTINGS=/$level -dNOPAUSE -dQUIET -dBATCH -sOutputFile=$outputfile $inputfile
