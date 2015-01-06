@@ -47,6 +47,11 @@ Handy for making a multi file project in Sublime Text is the meta command `%!TEX
 
 Spell checking can be enabled as explained in the [Sublime Text documentation](http://www.sublimetext.com/docs/2/spell_checking.html).
 
+### Helpful Shellscripts
+There are some shell scripts with frequently used shell commands.
+* `cleanBiberCache.sh`: This template, per default, uses Biber with BibLaTeX to create the bibliography. Sometimes, though, Biber gets confused and puts its binary into a strange temp folder, resulting in references being not found. This shell script cleans the cache and you should be done with another compilation (or two).
+* `reducePdfSize.sh`: You might end up with a quite big PDF file. While this might be useful for printing, some external limitations impose smaller file sizes. The script will convert your PDF into smaller-sized PDF by means of Ghostscript and Bitmap resolution reduction. Based on [this StackExchange comment](http://tex.stackexchange.com/a/41273/56326). Check `./reducePdfSize.sh -h` for help with invoking.
+
 ## LaTeX Feature List
 
 ### Basic Look
